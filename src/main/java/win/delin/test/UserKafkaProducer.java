@@ -18,7 +18,6 @@ public class UserKafkaProducer extends Thread {
     private String minus;
     public UserKafkaProducer(String brokerListStr, String topic, String minus) {
         Properties props = new Properties();
-        props.put("metadata.broker.list", brokerListStr);
         props.put("bootstrap.servers", brokerListStr);
         props.put("acks", "all");
         props.put("retries", 0);
